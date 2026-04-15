@@ -67,6 +67,7 @@ public class Method {
         return total;
     }
 
+    // String and array as parameter
     static void sayCongrats(String nama, int[] values) {
         int total = 0;
         for (var value : values) {
