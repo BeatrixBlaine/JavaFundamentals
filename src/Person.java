@@ -3,6 +3,8 @@ public class Person {
     // declare variable to be modified by PersonApp
     String name;
     String address;
+    int age;
+    int phone;
     final String country = "Indonesia";
 
     // create a method to be called by PersonApp
