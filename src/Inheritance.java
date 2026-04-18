@@ -6,6 +6,10 @@ public class Inheritance {
         System.out.println("Hello " + nama + ", my name is " + this.nama);
     }
 
+    int getCorner() {
+        return 0;
+    }
+
     // method sum
     int sum(int value1, int value2) {
         return value1 + value2;

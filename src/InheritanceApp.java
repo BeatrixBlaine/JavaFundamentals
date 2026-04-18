@@ -20,5 +20,15 @@ public class InheritanceApp {
 
         var result2 = inheritance.sum(value1, value2);
         System.out.println(result2);
+
+        System.out.println(example.childGetCorner());
+        System.out.println(example.getCorner());
+
+        // From class SuperConstructor
+        SuperConstructor sc = new SuperConstructor("27");
+        ChildConstructor cc = new ChildConstructor("29");
+
+        System.out.println(sc.age);
+        System.out.println(cc.age);
     }
 }

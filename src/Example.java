@@ -8,4 +8,12 @@ public class Example extends Inheritance {
     void sayHello(String nama) {
         System.out.println("Hello " + nama + ", I'm " + this.nama);
     }
+
+    int getCorner() {
+        return 4;
+    }
+
+    int childGetCorner() {
+        return super.getCorner();
+    }
 }
