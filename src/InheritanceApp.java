@@ -30,5 +30,8 @@ public class InheritanceApp {
 
         System.out.println(sc.age);
         System.out.println(cc.age);
+
+        // with method from Child Constructor
+        cc.displayAge();
     }
 }

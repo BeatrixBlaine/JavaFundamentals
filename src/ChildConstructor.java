@@ -4,4 +4,8 @@ public class ChildConstructor extends SuperConstructor {
         super(age);
     }
 
+    void displayAge() {
+        System.out.println(age);
+    }
+
 }
