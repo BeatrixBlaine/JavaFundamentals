@@ -8,6 +8,11 @@ public class CarApp {
         Car car = new Lamborghini();
         System.out.println(car.getTire());
         car.drive();
+        System.out.println(car.getType());
+
+        // from isForSale interface
+        isForSale obj = new Lamborghini();
+        System.out.println(obj.isForSale());
 
     }
 }
