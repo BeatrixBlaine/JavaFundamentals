@@ -21,6 +21,8 @@ public class PolymorphismApp {
         for (Polymorphism c : obj) {
             c.sayHello("Dina");
         }
+
+
     }
 
 }
