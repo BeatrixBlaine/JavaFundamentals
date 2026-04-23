@@ -1,3 +1,5 @@
+package Algorithm;
+
 import java.util.Scanner;
 
 public class CheckPrimeNumber {
@@ -7,8 +9,7 @@ public class CheckPrimeNumber {
             return false;
         }
 
-        // stop the loop before reaching x
-        for (int i = 2; i < x; i++) {
+        for (int i = 2; i <= Math.sqrt(x); i++) {
             if (x % i == 0) {
                 return false;
             }

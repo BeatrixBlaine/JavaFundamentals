@@ -1,3 +1,5 @@
+package Algorithm;
+
 public class PrintArray {
     public static void printArray(Object array) {
         if (array == null) return;

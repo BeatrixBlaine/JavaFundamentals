@@ -1,3 +1,5 @@
+package Algorithm;
+
 import java.util.Arrays;
 
 public class BinarySearch {
