@@ -8,6 +8,8 @@ public class ProductApp {
 
         System.out.println(product.name);
         System.out.println(product.price);
+        // toString method
+        System.out.println(product);
         System.out.println();
 
         /*
@@ -17,6 +19,7 @@ public class ProductApp {
         var obj = new City();
         obj.name = "Bandung";
         System.out.println(obj.name);
+
 
     }
 }

@@ -1,5 +1,7 @@
 package Interface;
 
+import java.lang.reflect.Array;
+
 public class CarApp {
 
     public static void main(String[] args) {
@@ -14,5 +16,10 @@ public class CarApp {
         isForSale obj = new Lamborghini();
         System.out.println(obj.isForSale());
 
+        // from Chevrolet class
+        Chevrolet obj2 = new Chevrolet();
+        System.out.println("This is default method from Car interface, and only Chevrolet Class has it: " + obj2.isBig());
+
     }
+
 }

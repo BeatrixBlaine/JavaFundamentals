@@ -1,10 +1,10 @@
 package Interface;
 
-public class Lamborghini implements Car, isForSale{
+public class Chevrolet implements Car, isForSale {
 
     @Override
     public void drive() {
-        System.out.println("Lamborghini Car");
+        System.out.println("ngeng");
     }
 
     @Override
@@ -14,7 +14,7 @@ public class Lamborghini implements Car, isForSale{
 
     @Override
     public String getType() {
-        return "Gallardo";
+        return "Sport Car";
     }
 
     @Override
@@ -22,4 +22,8 @@ public class Lamborghini implements Car, isForSale{
         return true;
     }
 
+    @Override
+    public boolean isBig() {
+        return true;
+    }
 }
