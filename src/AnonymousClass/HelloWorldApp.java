@@ -21,5 +21,13 @@ public class HelloWorldApp {
         obj.sayHello();
         obj.sayHello("Icad");
 
+        // static method
+        sayGoodbye();
+
+    }
+
+    // static method, can only be called in static app without creating object
+    public static void sayGoodbye() {
+        System.out.println("Goodbye");
     }
 }
