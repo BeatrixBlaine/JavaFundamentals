@@ -9,6 +9,8 @@ public class CountryApp {
         System.out.println(Country.PROVINCE);
         // static method from class MathUtil
         System.out.println(MathUtil.sum(1,2));
+        // static block
+        System.out.println(StaticKey.PROCESSORS);
 
     }
 }
