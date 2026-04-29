@@ -4,7 +4,13 @@ public record LoginRequest(String username, String password) {
 
     // constructor
     public LoginRequest {
-        System.out.println("User logged in");
+        if (username == null || password == null) {
+            System.out.println("Please fill the username or password correctly!");
+        } else if (username.isBlank() || password.isBlank() ) {
+            System.out.println("Please fill the username or password correctly!");
+        } else {
+            System.out.println("User Signed In");
+        }
     }
 
     // constructor overloading
