@@ -11,7 +11,18 @@ public class ValidationApp {
             ValidationUtil.validate(loginRequest);
         } catch (ValidationException e) {
             System.out.println("Terjadi error: " + e.getMessage());
+        } catch (NullPointerException e) {
+            System.out.println("Terjadi error: " + e.getMessage());
+        } finally {
+            System.out.println("Always executed!");
         }
+
+        /* Or you can do this :
+        *
+        * catch (ValidationException | NullPointerException e) {}s
+        *
+        * no limit in adding exception with this method, you can add another exception by | again
+        * */
 
     }
 }
