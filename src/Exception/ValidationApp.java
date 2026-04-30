@@ -7,6 +7,7 @@ public class ValidationApp {
 
         LoginRequest loginRequest = new LoginRequest(null,null);
 
+        // Exception
         try {
             ValidationUtil.validate(loginRequest);
         } catch (ValidationException e) {
@@ -23,6 +24,11 @@ public class ValidationApp {
         *
         * no limit in adding exception with this method, you can add another exception by | again
         * */
+
+        // Runtime Exception
+        LoginRequest loginRequest1 = new LoginRequest("Icad", "12345");
+        ValidationUtil.validateRuntime(loginRequest1);
+
 
     }
 }
