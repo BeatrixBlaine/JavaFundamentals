@@ -16,10 +16,14 @@ public class QuickSort {
         PrintArray.printArray(numbers);
 
         System.out.println("After : ");
-        quickSort(numbers, 0, numbers.length - 1);
+        quickSort(numbers);
         PrintArray.printArray(numbers);
 
 
+    }
+
+    public static void quickSort(int[] array) {
+        quickSort(array, 0, array.length - 1);
     }
 
     public static void quickSort(int[] arrayValue, int lowIndex, int highIndex) {
