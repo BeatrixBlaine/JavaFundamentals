@@ -6,8 +6,7 @@ public class Fibonacci {
 
     public static void main(String[] args) {
 
-
-        PrintArray.printArray(fibonacci(10));
+        PrintArray.printArray(fibonacci(15));
 
     }
 
