@@ -13,7 +13,7 @@ public class MysteriousSequence {
         for (int i = 1; i <= x; i++) {
             int number;
             if (i % 2 == 0) {
-                number = i * i * i;
+                number = (int) Math.pow(i, 3);
                 System.out.print(number + " ");
             } else {
                 number = i * i;
