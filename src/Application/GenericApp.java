@@ -11,9 +11,9 @@ public class GenericApp {
     public static void main(String[] args) {
 
         // create object
-        MyData<String> data = new MyData<String>();
-        MyData<Integer> num = new MyData<Integer>();
-        MyData<Double> myDouble = new MyData<Double>();
+        MyData<String> data = new MyData<>();
+        MyData<Integer> num = new MyData<>();
+        MyData<Double> myDouble = new MyData<>();
 
         // Different data type depends on what you fill in the generic
         // <String> <Integer> <Double>
@@ -26,11 +26,11 @@ public class GenericApp {
         System.out.println(myDouble.getData());
 
         // Multiple parameter generic, I created String & Integer
-        PairData<String, Integer> pair = new PairData<String, Integer>();
+        PairData<String, Integer> pair = new PairData<>();
         pair.setValue1("Irsyad");
         pair.setValue2(25);
 
-        PairData<String, Double> pair2 = new PairData<String, Double>("Temperature", 27.00);
+        PairData<String, Double> pair2 = new PairData<>("Temperature", 27.00);
 
         System.out.println("---------------");
         System.out.println(pair.getValue1());
@@ -46,6 +46,22 @@ public class GenericApp {
         System.out.println(GenericUtils.count(pair.getAll()));
         System.out.println(GenericUtils.printAll(pair.getAll()));
         System.out.println(GenericUtils.printAll(pair2.getAll()));
+
+        // covariant method process (read only)
+        System.out.println("---------------");
+        GenericUtils.process(data);
+        GenericUtils.process(pair2);
+        GenericUtils.process(pair);
+
+        // contravariant method (write)
+        PairData <Object, Object> data1 = new PairData<>();
+        MyData <Object> data2 = new MyData<>();
+        System.out.println("---------------");
+        GenericUtils.setString(data1); // method setString write a value into the Object created
+        GenericUtils.setString(data2);
+        GenericUtils.process(data1); // method process to printout
+        GenericUtils.process(data2);
+
 
     }
 }

@@ -12,11 +12,11 @@ public class PrintFApp {
         boolean value5 = true;
 
         // use %n to create another print another line
-        System.out.printf("Current number %d%n", value1);
-        System.out.printf("Current value %f%n", value2);
-        System.out.printf("Current String %s%n", value3);
-        System.out.printf("Current char %c%n", value4);
-        System.out.printf("Current boolean : %b%n", value5);
+        System.out.printf("Current number %d%n", value1); // integer
+        System.out.printf("Current value %f%n", value2); // double/float
+        System.out.printf("Current String %s%n", value3); // String
+        System.out.printf("Current char %c%n", value4); // char
+        System.out.printf("Current boolean : %b%n", value5); // boolean
 
         // use %.2f to use 2 decimal number
         System.out.printf("Current double %.2f%n", value2);
