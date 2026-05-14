@@ -51,7 +51,7 @@ public class ObjectsClassApp {
         }*/
 
         // code above act the same like below
-        System.out.println(Objects.toString(data));
+        System.out.println(data);
         System.out.println(Objects.hashCode(data));
     }
 }

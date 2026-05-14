@@ -1,6 +1,7 @@
 package Application;
 
 import Algorithm.PrintArray;
+import Generic.BoundedTypeClass;
 import Generic.GenericUtils;
 import Generic.MyData;
 import Generic.PairData;
@@ -62,6 +63,13 @@ public class GenericApp {
         GenericUtils.process(data1); // method process to printout
         GenericUtils.process(data2);
 
+        // Bounded Type Parameter (Generic class with limited data type)
+        // BoundedTypeClass extends number, so it only works if the generic is number
+        // example Double, Float, Integer etc.
+        System.out.println("---------------");
+        BoundedTypeClass<Double> boundedTypeClass = new BoundedTypeClass<>();
+        boundedTypeClass.setData(10.0);
+        System.out.println(boundedTypeClass.getData());
 
     }
 }
