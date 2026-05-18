@@ -1,3 +1,5 @@
+package InitialFundamentals;
+
 public class PolymorphismNiece extends Polymorphism {
 
     PolymorphismNiece(String name) {

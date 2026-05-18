@@ -1,13 +1,15 @@
+package InitialFundamentals;
+
 public class InheritanceApp {
 
     public static void main(String[] args) {
 
-        // parent class Inheritance
+        // parent class InitialFundamentals.Inheritance
         var inheritance = new Inheritance();
         inheritance.nama = "Irsyad";
         inheritance.sayHello("Sarah");
 
-        // calling method in Example class which is a child from Inheritance
+        // calling method in InitialFundamentals.Example class which is a child from InitialFundamentals.Inheritance
         var example = new Example();
         example.nama = "Icad";
         example.sayHello("Zahrah");
@@ -24,14 +26,14 @@ public class InheritanceApp {
         System.out.println(example.childGetCorner());
         System.out.println(example.getCorner());
 
-        // From class SuperConstructor
+        // From class InitialFundamentals.SuperConstructor
         SuperConstructor sc = new SuperConstructor("27");
         ChildConstructor cc = new ChildConstructor("29");
 
         System.out.println(sc.age);
         System.out.println(cc.age);
 
-        // with method from Child Constructor
+        // with method from InitialFundamentals.Child Constructor
         cc.displayAge();
     }
 }

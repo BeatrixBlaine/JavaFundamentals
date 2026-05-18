@@ -1,3 +1,5 @@
+package InitialFundamentals;
+
 public class PersonApp {
 
     public static void main(String[] args) {
@@ -6,10 +8,10 @@ public class PersonApp {
         Person person1 = new Person();
         var person2 = new Person();
 
-        // object with constructor from PersonInformation class
+        // object with constructor from InitialFundamentals.PersonInformation class
         PersonInformation info1 = new PersonInformation(25, "12345");
 
-        // initialize variables from attributes in Person class
+        // initialize variables from attributes in InitialFundamentals.Person class
         person1.name = "Irsyad";
         person1.address = "Bandung";
 

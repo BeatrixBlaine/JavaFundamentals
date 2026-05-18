@@ -1,3 +1,5 @@
+package InitialFundamentals;
+
 public class ArrayData {
     static void main(String[] args) {
 

@@ -1,3 +1,5 @@
+package InitialFundamentals;
+
 public class Inheritance {
     String nama;
 
@@ -15,7 +17,7 @@ public class Inheritance {
         return value1 + value2;
     }
 
-    // will do inheritance in Example class
-    // and run in InheritanceApp
+    // will do inheritance in InitialFundamentals.Example class
+    // and run in InitialFundamentals.InheritanceApp
 
 }

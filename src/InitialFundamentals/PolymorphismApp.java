@@ -1,14 +1,16 @@
+package InitialFundamentals;
+
 public class PolymorphismApp {
 
     public static void main(String[] args) {
 
-//        Polymorphism obj = new Polymorphism("Icad");
+//        InitialFundamentals.Polymorphism obj = new InitialFundamentals.Polymorphism("Icad");
 //        obj.sayHello("Sarah");
 //
-//        obj = new PolymorphismChild("Icad");
+//        obj = new InitialFundamentals.PolymorphismChild("Icad");
 //        obj.sayHello("Dina");
 //
-//        obj = new PolymorphismNiece("Icad");
+//        obj = new InitialFundamentals.PolymorphismNiece("Icad");
 //        obj.sayHello("Aliyya");
 //
 

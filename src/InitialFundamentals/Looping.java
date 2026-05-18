@@ -1,10 +1,12 @@
+package InitialFundamentals;
+
 public class Looping {
     static void main(String[] args) {
 
         // for loop
         // initialize i, condition, post statement (so it doesn't loop forever)
         for (int i = 1; i <= 3; i++){
-            System.out.println("Looping " + i);
+            System.out.println("InitialFundamentals.Looping " + i);
         }
 
         // nested for loop (outer loop & inner loop, pay attention to the iteration)

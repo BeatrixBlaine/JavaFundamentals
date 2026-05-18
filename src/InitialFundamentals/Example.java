@@ -1,3 +1,5 @@
+package InitialFundamentals;
+
 public class Example extends Inheritance {
     @Override
     int sum(int value1, int value2) {

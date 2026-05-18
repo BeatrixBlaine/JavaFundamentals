@@ -1,3 +1,5 @@
+package InitialFundamentals;
+
 public class TernaryOperator {
     static void main(String[] args) {
 

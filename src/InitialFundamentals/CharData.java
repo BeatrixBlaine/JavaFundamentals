@@ -1,3 +1,5 @@
+package InitialFundamentals;
+
 public class CharData {
     static void main(String[] args) {
         char i = 'I';

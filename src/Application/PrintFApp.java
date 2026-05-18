@@ -23,5 +23,9 @@ public class PrintFApp {
         System.out.printf("Current double %.1f%n", value2);
         System.out.printf("Current double %.4f%n", value2);
 
+        // more about printf
+        System.out.printf("%04d%n", value1); // add 00 infront of the current number, and use 4 right aligned spaces
+        System.out.printf("%-4s%n", value3); // left align 4 spaces
+
     }
 }

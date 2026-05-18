@@ -1,3 +1,4 @@
+package InitialFundamentals;
 
 public class RecursiveMethod {
 

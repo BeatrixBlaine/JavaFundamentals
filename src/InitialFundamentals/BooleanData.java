@@ -1,4 +1,4 @@
-import javax.sound.midi.SysexMessage;
+package InitialFundamentals;
 
 public class BooleanData {
     static void main(String[] args) {

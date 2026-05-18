@@ -1,3 +1,5 @@
+package InitialFundamentals;
+
 public class ParentApp {
 
     public static void main(String[] args) {
@@ -8,7 +10,7 @@ public class ParentApp {
         child.doIt();
         System.out.println(child.name);
 
-        // calling method from child, because the object is Child()
+        // calling method from child, because the object is InitialFundamentals.Child()
         Parent parent = (Parent) child;
         parent.name = "Icad";
         parent.doIt();

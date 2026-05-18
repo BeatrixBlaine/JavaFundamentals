@@ -4,7 +4,7 @@ public class HelloWorldApp {
 
     public static void main(String[] args) {
 
-        // Anonymous Class, creating instance from HelloWorld interface
+        // Anonymous Class, creating instance from InitialFundamentals.HelloWorld interface
         // normally interface should be implemented to other classes, then use it in the main app
         HelloWorld obj = new HelloWorld()/* <-- this is the anonymous class */ {
             @Override

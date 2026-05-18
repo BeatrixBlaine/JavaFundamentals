@@ -1,3 +1,5 @@
+package InitialFundamentals;
+
 public class StringData {
     static void main(String[] args) {
         String firstName = "Muhammad Irsyad";

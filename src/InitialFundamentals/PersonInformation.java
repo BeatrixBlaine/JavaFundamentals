@@ -1,3 +1,5 @@
+package InitialFundamentals;
+
 public class PersonInformation {
     int age;
     String phone;

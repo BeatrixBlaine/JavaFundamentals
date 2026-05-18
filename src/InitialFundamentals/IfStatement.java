@@ -1,3 +1,5 @@
+package InitialFundamentals;
+
 public class IfStatement {
     static void main(String[] args) {
 

@@ -1,3 +1,5 @@
+package InitialFundamentals;
+
 public class MathOperations {
     static void main(String[] args) {
 

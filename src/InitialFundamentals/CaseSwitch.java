@@ -1,3 +1,5 @@
+package InitialFundamentals;
+
 public class CaseSwitch {
     static void main(String[] args) {
 

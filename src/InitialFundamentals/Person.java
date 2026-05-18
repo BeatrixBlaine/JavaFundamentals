@@ -1,6 +1,8 @@
+package InitialFundamentals;
+
 public class Person {
 
-    // declare variable to be modified by PersonApp
+    // declare variable to be modified by InitialFundamentals.PersonApp
     String name;
     String address;
     int age;
@@ -53,7 +55,7 @@ public class Person {
         return country;
     }
 
-    // create a method to be called by PersonApp
+    // create a method to be called by InitialFundamentals.PersonApp
     void sayHello(String paramName) {
         System.out.println("Hello " + paramName + ", My name is " + name);
     }
