@@ -17,9 +17,9 @@ public class MultiplicationTable {
             for (int j = 1; j <= width; j++) {
                 int value = j * i;
 
-                if ((value >= 10 || value <= 10) && j == 5) {
+                if ((value >= 10 || value <= 10) && j == width) {
                     System.out.print(value);
-                } else if (value >= 10 && j != 5) {
+                } else if (value >= 10 && j != width) {
                     System.out.print(value + " ");
                 } else {
                     System.out.print(value + "  ");
