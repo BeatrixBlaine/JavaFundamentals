@@ -1,6 +1,8 @@
 package TestClass;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class UsersHobby {
@@ -21,7 +23,7 @@ public class UsersHobby {
     }
 
     public List<String> getHobbies() {
-        return hobbies;
+        return Collections.unmodifiableList(hobbies); // Immutable, so other method cannot modify the value
     }
 
     public void addHobby(String hobby) {
