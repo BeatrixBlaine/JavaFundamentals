@@ -27,5 +27,6 @@ public class PrintFApp {
         System.out.printf("%04d%n", value1); // add 00 infront of the current number, and use 4 right aligned spaces
         System.out.printf("%-4s%n", value3); // left align 4 spaces
 
+
     }
 }

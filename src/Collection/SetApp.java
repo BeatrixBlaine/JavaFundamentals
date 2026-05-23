@@ -1,11 +1,10 @@
 package Collection;
 
+import Algorithm.PrintArray;
 import EnumClass.Level;
+import InitialFundamentals.Person;
 
-import java.util.EnumSet;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.*;
 
 public class SetApp {
     public static void main(String[] args) {
@@ -40,6 +39,18 @@ public class SetApp {
         for (var i : levels) {
             System.out.println(i);
         }
+
+        // SortedSet
+        SortedSet<Integer> nums = new TreeSet<>();
+        nums.add(3);
+        nums.add(10);
+        nums.add(7);
+
+        // Auto sort (Ascending)
+        PrintArray.printArray(nums);
+        // method for descending order only available in NavigableSet not SortedSet
+        NavigableSet<Integer> nav = (NavigableSet<Integer>) nums; // Cast to NavigableSet
+        PrintArray.printArray(nav.descendingSet());
 
         // List is used if you need to have a same identic value
         // Set is used if you need unique elements

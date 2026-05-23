@@ -24,5 +24,10 @@ public class DateApp {
         Date result2 = calendar.getTime();
         System.out.println(result2);
 
+        // find day in current Date (in int)
+        calendar.set(2000,8,13);
+        System.out.println(calendar.getTime());
+        System.out.println(calendar.get(Calendar.DAY_OF_WEEK));
+
     }
 }
