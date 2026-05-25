@@ -10,6 +10,7 @@ public class PrintFApp {
         String value3 = "Irsyad";
         char value4 = 'c';
         boolean value5 = true;
+        double payment = 100000.00;
 
         // use %n to create another print another line
         System.out.printf("Current number %d%n", value1); // integer
@@ -25,7 +26,10 @@ public class PrintFApp {
 
         // more about printf
         System.out.printf("%04d%n", value1); // add 00 infront of the current number, and use 4 right aligned spaces
-        System.out.printf("%-4s%n", value3); // left align 4 spaces
+        System.out.printf("%-4s%n", value3);// left align 4 spaces
+
+        // more
+        System.out.printf("Rp%,.2f", payment);
 
 
     }
