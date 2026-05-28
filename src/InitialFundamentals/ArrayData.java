@@ -1,5 +1,9 @@
 package InitialFundamentals;
 
+import Algorithm.PrintArray;
+
+import java.util.Arrays;
+
 public class ArrayData {
     static void main(String[] args) {
 
@@ -22,6 +26,14 @@ public class ArrayData {
         System.out.println(b[1]);
         System.out.println(b.length);
         System.out.println(murid[0][1]);
+
+        for(int i = 0; i < murid.length; i++) {
+            System.out.println(Arrays.toString(murid[i]));
+        }
+
+        for(var i : murid) {
+            System.out.println(Arrays.toString(i));
+        }
 
     }
 }
