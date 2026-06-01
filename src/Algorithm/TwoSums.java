@@ -4,7 +4,7 @@ public class TwoSums {
     public static void main(String[] args) {
 
         int[] nums = {1,2,3,4};
-        int[] result = twoSum(nums, 3);
+        int[] result = twoSum(nums, 7);
 
         System.out.println("[" + result[0] + ", " + result[1] + "]");
     }
