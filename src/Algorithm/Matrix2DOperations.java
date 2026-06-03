@@ -5,17 +5,18 @@ public class Matrix2DOperations {
     public static void main(String[] args) {
 
         int[][] array1 = {
-                {1,2},
-                {2,3}
+                {1,2,3},
+                {2,3,3}
         };
 
         int[][] array2 = {
-                {1,2},
-                {2,3}
+                {1,2,3},
+                {2,3,3}
         };
 
         PrintArray.printArray(addition(array1,array2));
         PrintArray.printArray(substract(array1,array2));
+        PrintArray.printArray(createJaggedArray(5));
 
     }
 
@@ -51,6 +52,20 @@ public class Matrix2DOperations {
         for (int i = 0; i < matrix1.length; i++) {
             for (int j = 0; j < matrix1[0].length; j++) {
                 result[i][j] = matrix1[i][j] - matrix2[i][j];
+            }
+        }
+
+        return result;
+    }
+
+    public static int[][] createJaggedArray(int n) {
+        // Write your code here
+        int[][] result = new int[n][];
+
+        for (int i = 0; i < result.length; i++) {
+            result[i] = new int[i + 1]; // each row grows larger size of array
+            for (int j = 0; j < result[i].length; j++) {
+                result[i][j] = (i + 1) * (j + 1); // input value
             }
         }
 
