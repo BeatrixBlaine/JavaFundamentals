@@ -18,6 +18,11 @@ public class Matrix2DOperations {
         PrintArray.printArray(substract(array1,array2));
         PrintArray.printArray(createJaggedArray(5));
 
+        int numStudent = 3;
+        int[] subjects = {3,4,1};
+
+        PrintArray.printArray(processGrades(numStudent, subjects));
+
     }
 
     public static int[][] addition(int[][] matrix1, int[][] matrix2) {
@@ -66,6 +71,28 @@ public class Matrix2DOperations {
             result[i] = new int[i + 1]; // each row grows larger size of array
             for (int j = 0; j < result[i].length; j++) {
                 result[i][j] = (i + 1) * (j + 1); // input value
+            }
+        }
+
+        return result;
+    }
+
+    public static int[][] processGrades(int numStudents, int[] subjectsPerStudent) {
+        // Check if input is valid
+        // Create jagged array based on number of students
+        // For each student:
+        //   - Create row with length matching their subject count
+        //   - Fill with grades using formula: (studentNum + 1) * 10 + subjectNum
+        if (numStudents < 0 || subjectsPerStudent == null || subjectsPerStudent.length != numStudents) {
+            return new int[0][0];
+        }
+
+        int[][] result = new int[numStudents][];
+
+        for (int i = 0; i < result.length; i++) {
+            result[i] = new int[subjectsPerStudent[i]];
+            for (int j = 0; j < result[i].length; j++) {
+                result[i][j] = (i + 1) * 10 + (j + 1);
             }
         }
 
