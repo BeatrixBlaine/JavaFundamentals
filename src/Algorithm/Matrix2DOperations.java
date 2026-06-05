@@ -1,16 +1,20 @@
 package Algorithm;
 
+import java.util.Arrays;
+
 public class Matrix2DOperations {
 
     public static void main(String[] args) {
 
         int[][] array1 = {
                 {1,2,3},
+                {1,4,1},
                 {2,3,3}
         };
 
         int[][] array2 = {
                 {1,2,3},
+                {4,4,4},
                 {2,3,3}
         };
 
@@ -22,6 +26,29 @@ public class Matrix2DOperations {
         int[] subjects = {3,4,1};
 
         PrintArray.printArray(processGrades(numStudent, subjects));
+        System.out.println(Arrays.toString(array1[0]));
+        System.out.println(array1[0][1]);
+        System.out.println();
+
+        // main loop for 2D Array
+        for (int i = 0; i < array1.length; i++) {
+            for (int j = 0; j < array1[i].length; j++) {
+                System.out.println(array1[i][j]);
+            }
+        }
+
+        System.out.println("-------------------");
+        // traversal main diagonal
+        for (int i = 0; i < array1.length; i++) {
+            System.out.println(array1[i][i]);
+        }
+        System.out.println("-------------------");
+        // traverse anti-diagonal
+        for (int i = 0; i < array1.length; i++) {
+            System.out.println(array1[i][array1.length - 1 - i]);
+        }
+        System.out.println("-------------------");
+        printPatterns(array1);
 
     }
 
@@ -97,6 +124,40 @@ public class Matrix2DOperations {
         }
 
         return result;
+    }
+
+    public static void printPatterns(int[][] matrix) {
+        // Write your code here
+        System.out.printf("Main Diagonal: ");
+        for (int i = 0; i < matrix.length; i++) {
+            System.out.print(matrix[i][i] + " ");
+        }
+
+        System.out.printf("\nAnti-Diagonal: ");
+        for (int i = 0; i < matrix.length; i++) {
+            System.out.print(matrix[i][matrix.length - 1 - i] + " ");
+        }
+
+        System.out.printf("\nTop Border: ");
+        for (int i = 0; i < matrix[0].length; i++) {
+            System.out.print(matrix[0][i] + " ");
+        }
+
+        System.out.printf("\nBottom Border: ");
+        for (int i = 0; i < matrix[matrix.length - 1].length; i++) {
+            System.out.print(matrix[matrix.length - 1][i] + " ");
+        }
+
+        System.out.printf("\nLeft Border: ");
+        for (int i = 0; i < matrix.length; i++) {
+            System.out.print(matrix[i][0] + " ");
+        }
+
+        System.out.printf("\nRight Border: ");
+        for (int i = 0; i < matrix.length; i++) {
+            System.out.print(matrix[i][matrix[i].length - 1] + " ");
+        }
+
     }
 
 }
