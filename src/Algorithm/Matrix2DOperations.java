@@ -19,7 +19,7 @@ public class Matrix2DOperations {
         };
 
         PrintArray.printArray(addition(array1,array2));
-        PrintArray.printArray(substract(array1,array2));
+        PrintArray.printArray(subtract(array1,array2));
         PrintArray.printArray(createJaggedArray(5));
 
         int numStudent = 3;
@@ -49,6 +49,9 @@ public class Matrix2DOperations {
         }
         System.out.println("-------------------");
         printPatterns(array1);
+        System.out.println();
+        System.out.println("-------------------");
+        printAdvancedPatterns(array1);
 
     }
 
@@ -71,7 +74,7 @@ public class Matrix2DOperations {
         return result;
     }
 
-    public static int[][] substract(int[][] matrix1, int[][] matrix2) {
+    public static int[][] subtract(int[][] matrix1, int[][] matrix2) {
 
         if ((matrix1.length != matrix2.length) || (matrix1[0].length != matrix2[0].length)) {
             return new int[][]{
@@ -159,5 +162,71 @@ public class Matrix2DOperations {
         }
 
     }
+
+    public static void printAdvancedPatterns(int[][] matrix) {
+        // Write your code here
+//        int index = matrix.length;
+//        int down = 1;
+//        System.out.printf("Both Diagonals: ");
+//        for (int i = 0; i < (matrix.length * 2); i++) {
+//            if (i < matrix.length) {
+//                System.out.print(matrix[i][i] + " ");
+//            } else {
+//                if (matrix[matrix.length / 2][matrix[0].length / 2] == matrix[i - index][matrix[i - index].length - down]) {
+//                    down++;
+//                    continue;
+//                }
+//                System.out.print(matrix[i - index][matrix[i - index].length - down] + " ");
+//                down++;
+//            }
+//        }
+        int n = matrix.length;
+
+        System.out.print("Both Diagonals: ");
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(matrix[i][i] + " "); // main diagonal
+        }
+
+        for (int i = 0; i < n; i++) {
+            if (i != n - 1 - i) { // skip center if overlapping
+                System.out.print(matrix[i][n - 1 - i] + " ");
+            }
+        }
+
+        System.out.printf("\nSpiral Order: ");
+        int top = 0;
+        int bottom = matrix.length - 1;
+        int left = 0;
+        int right = matrix[0].length - 1;
+
+        while (top <= bottom && left <= right) {
+
+            for (int col = left; col <= right; col++) {
+                System.out.print(matrix[top][col] + " ");
+            }
+            top++;
+
+            for (int row = top; row <= bottom; row++) {
+                System.out.print(matrix[row][right] + " ");
+            }
+            right--;
+
+            if (top <= bottom) {
+                for (int col = right; col >= left; col--) {
+                    System.out.print(matrix[bottom][col] + " ");
+                }
+                bottom--;
+            }
+
+            if (left <= right) {
+                for (int row = bottom; row >= top; row--) {
+                    System.out.print(matrix[row][left] + " ");
+                }
+                left++;
+            }
+        }
+    }
+
 
 }
