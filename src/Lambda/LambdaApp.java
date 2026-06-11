@@ -3,6 +3,10 @@ package Lambda;
 import Algorithm.PrintArray;
 
 import java.util.Arrays;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class LambdaApp {
     public static void main(String[] args) {
@@ -78,6 +82,48 @@ public class LambdaApp {
         };
 
         PrintArray.printArray(acts.add(array1.action(),array2.action()));
+        System.out.println("----------------------");
+
+        // java.util.function
+        Consumer<String> consumer = new Consumer<String>() {
+            @Override
+            public void accept(String value) {
+                System.out.println(value);
+            }
+        };
+
+        consumer.accept("Example");
+
+        Function<String, Integer> function = new Function<String, Integer>() {
+            @Override
+            public Integer apply(String s) {
+                return s.length();
+            }
+        };
+
+        System.out.println(function.apply("Irsyad"));
+
+        Predicate<String> predicate = new Predicate<String>() {
+            @Override
+            public boolean test(String s) {
+                int length = s.length();
+                if (length > 5) {
+                    return true;
+                }
+                return false;
+            }
+        };
+
+        System.out.println(predicate.test("Irsyad"));
+
+        Supplier<String> supplier = new Supplier<String>() {
+            @Override
+            public String get() {
+                return "Halo";
+            }
+        };
+
+        System.out.println(supplier.get());
 
 
     }

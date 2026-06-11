@@ -84,6 +84,10 @@ public class MapApp {
             System.out.println(i.getKey() + " " + i.getValue());
         }
 
+        for (String value : dict.keySet()) {
+            System.out.println("Key: " + value + " Value: " + dict.get(value));
+        }
+
     }
 
     public static enum Level {
