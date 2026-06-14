@@ -20,6 +20,24 @@ public class WorkWithHashMap {
         System.out.println("---------------------");
         printNestedInventory(map);
 
+        HashMap<String, Integer> warehouse = new HashMap<>();
+        warehouse.put("Laptop", 10);
+        warehouse.put("Mouse", 100);
+        warehouse.put("Shoes", 40);
+        warehouse.put("Phone", 37);
+
+        String[] operations = {
+                "ADD Laptop 30",
+                "REMOVE Mouse 27",
+                "ADD Guitar 17",
+                "CHECK Phone",
+                "CHECK Umbrella",
+                "PRINT"
+        };
+
+        System.out.println("---------------------");
+        manageWarehouse(warehouse, operations);
+
 
     }
 
@@ -71,5 +89,55 @@ public class WorkWithHashMap {
         }
     }
 
+    public static void manageWarehouse(HashMap<String, Integer> warehouse, String[] operations) {
+        // Write your code here
 
+        for (int i = 0; i < operations.length; i++) {
+            String[] op = operations[i].split(" ");
+
+            String command = op[0];
+
+            switch (command) {
+                case "ADD":
+                    String key = op[1];
+                    int addValue = Integer.parseInt(op[2]);
+                    if (warehouse.containsKey(key)) {
+                        int currentValue = warehouse.get(key);
+                        warehouse.put(key, currentValue + addValue);
+                    } else {
+                        warehouse.put(key, addValue);
+                    }
+                    break;
+
+                case "REMOVE":
+                    String key1 = op[1];
+                    int removeValue = Integer.parseInt(op[2]);
+
+                    if (warehouse.containsKey(key1)) {
+                        int currentValue = warehouse.get(key1);
+
+                        if (currentValue <= removeValue) {
+                            warehouse.remove(key1);
+                        } else {
+                            warehouse.put(key1, currentValue - removeValue);
+                        }
+                    }
+                    break;
+
+                case "CHECK":
+                    String key2 = op[1];
+                    System.out.println(warehouse.containsKey(key2));
+                    break;
+
+                case "PRINT":
+                    for (Map.Entry<String, Integer> entry : warehouse.entrySet()) {
+                        System.out.println("Product: " + entry.getKey() + ", Quantity: " + entry.getValue());
+                    }
+                    break;
+
+            }
+
+        }
+
+    }
 }

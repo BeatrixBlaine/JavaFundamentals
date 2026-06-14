@@ -9,28 +9,17 @@ import java.util.*;
 public class TestApp {
     public static void main(String[] args) {
 
-        int[] merged = new int[4];
+        String[] operations = {
+                "ADD Keyboard 30",
+                "ADD Mouse 30"
+        };
 
-        for (int i = 0; i < merged.length; i++) {
-            merged[i] = i + 1;
-        }
+        String[] op = operations[0].split(" ");
 
-        int m = merged.length % 2;
-        System.out.println(m);
-        PrintArray.printArray(merged);
+        PrintArray.printArray(op);
 
-        double median = 0;
-        if (merged.length % 2 == 0) {
-            median = (merged[(merged.length / 2) - 1] + merged[merged.length / 2]) / 2;
-        } else {
-            median = merged[merged.length / 2];
-        }
+        System.out.println(op[2]);
 
-        double x = 5;
-        double y = 2;
-        double nums = x / y;
-        System.out.println(median);
-        System.out.println(nums);
     }
 
 }
