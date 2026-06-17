@@ -125,6 +125,19 @@ public class LambdaApp {
 
         System.out.println(supplier.get());
 
+        // Method Reference
+        Predicate<String> predicateIsLowerCase = new Predicate<String>() {
+            @Override
+            public boolean test(String s) {
+                return StringUtil.isLowerCase(s);
+            }
+        };
+
+        System.out.println(predicateIsLowerCase.test("Icad"));
+
+        Predicate<String> predicate1 = value -> StringUtil.isLowerCase(value);
+
+        System.out.println(predicate1.test("icad"));
 
     }
 }

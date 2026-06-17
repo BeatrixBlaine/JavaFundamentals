@@ -27,6 +27,9 @@ public class ListApp {
         PrintArray.printArray(arrayList);
         System.out.println();
         System.out.println(arrayList.get(1));
+        for (int i = 0; i < arrayList.size(); i++) {
+            System.out.println(arrayList.get(i));
+        }
 
         // Before removing index 1, elements after it are shifted left.
         // For example, value 7 moves from index 2 to index 1.

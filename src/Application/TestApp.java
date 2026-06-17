@@ -9,16 +9,13 @@ import java.util.*;
 public class TestApp {
     public static void main(String[] args) {
 
-        String[] operations = {
-                "ADD Keyboard 30",
-                "ADD Mouse 30"
-        };
+        HashSet<Integer> nums = new HashSet<>();
 
-        String[] op = operations[0].split(" ");
+        for (int i = 0; i < 10; i++) {
+            nums.add(i + 1);
+        }
 
-        PrintArray.printArray(op);
-
-        System.out.println(op[2]);
+        System.out.println(nums);
 
     }
 
