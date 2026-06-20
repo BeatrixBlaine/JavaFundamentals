@@ -1,7 +1,9 @@
 package Lambda;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 public class ForEachApp {
 
@@ -27,6 +29,22 @@ public class ForEachApp {
 
         // lambda method reference
         list.forEach(System.out::println);
+
+        // List
+        List<String> names = new ArrayList<>();
+        names.addAll(List.of("Icad", "Dina", "Eki", "asfhasfhahsfa", "sadasdasdas"));
+
+        // remove if without lambda
+        names.removeIf(new Predicate<String>() {
+            @Override
+            public boolean test(String value) {
+                return value.length() > 5;
+            }
+        });
+
+        // remove if with lambda
+        names.removeIf(name -> name.length() > 5); // name is parameter, can be rename with anything
+        System.out.println(names);
 
     }
 
