@@ -15,6 +15,8 @@ public class SetApp {
         names.add("Icad");
         names.add("Dina");
 
+        HashSet<String> test = new HashSet<>();
+
         for (var name : names) {
             System.out.println(name);
         }
