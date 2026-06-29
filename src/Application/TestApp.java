@@ -9,13 +9,14 @@ import java.util.*;
 public class TestApp {
     public static void main(String[] args) {
 
-        HashSet<Integer> nums = new HashSet<>();
+        int x = 100;
+        Integer y = x;
+        String name = "asdasdasd";
+        char[] chars = name.toCharArray();
 
-        for (int i = 0; i < 10; i++) {
-            nums.add(i + 1);
+        for (var i : chars) {
+            System.out.println(i);
         }
-
-        System.out.println(nums);
 
     }
 
