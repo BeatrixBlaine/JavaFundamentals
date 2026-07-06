@@ -5,6 +5,7 @@ public class ValidateUsername {
 
         String username = "mirsyadi";
         System.out.println(validateUsername(username));
+        System.out.println();
 
     }
 
