@@ -9,10 +9,7 @@ import java.util.*;
 public class TestApp {
     public static void main(String[] args) {
 
-        String name = "Sarah";
 
-        name.isEmpty();
-        name.contains(" ");
 
     }
 
